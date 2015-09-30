@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hey its You</title>
+     <script src="adapter.js"></script>
+</head>
+<body>
+    <video id="urVideo" autoplay="autoplay">
+
+    </video>
+
+    <script>
+        navigator.getUserMedia({ audio: true, video: true }, function (str) {
+            debugger
+            attachMediaStream(document.getElementById('urVideo'), str);
+            
+        }, function (err) {
+            alert('getUserMedia Error')
+
+        })
+
+    </script>
+   
+
+
+
+
+</body>
+</html>
