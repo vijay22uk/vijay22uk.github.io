@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Hey its You</title>
      <script src="adapter.js"></script>
+     <script src="main.js"></script>
     <style>
         #urVideo{
             width:100%;
@@ -25,7 +26,7 @@
 
 
     <script>
-        navigator.getUserMedia({ audio: true, video: true }, function (str) {
+       /* navigator.getUserMedia({ audio: true, video: true }, function (str) {
             debugger
             attachMediaStream(document.getElementById('urVideo'), str);
             document.getElementById('content').innerText = "Hey trust me you really look like this HAHA :)" ;
@@ -33,7 +34,7 @@
         }, function (err) {
             alert('getUserMedia Error')
         })
-
+*/
     </script>
    
 
