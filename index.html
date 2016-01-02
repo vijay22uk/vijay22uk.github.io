@@ -32,6 +32,25 @@
     min-height: 100%;
     background: #222;
 }
+.footer{
+    position: fixed;
+    bottom: 12px;
+    left:12px;
+}
+.blink {
+  animation: blink 1s steps(5, start) infinite;
+  -webkit-animation: blink 1s steps(5, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
 </style>
 </head>
 <body>
@@ -92,6 +111,14 @@ xx        xx  xx        xx         xxxx       xx     xx
            </ul>
         </div>
     <div>
-    
+    <div class="footer">
+        <div class="container-fluid">
+            <span>
+                <a  href="docs/Vijay Pandey v1.1.docx"><span class="blink"> >>>>>>></span> Resume <span class="blink"><<<<<<< </span></a>
+            </span>
+            
+        </div>
+        
+    </div>
 </body>
 </html>
