@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Indexing</title>
+  <script src="one.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+  crossorigin="anonymous">
+  <style>
+    body {
+      letter-spacing: 1px;
+      padding: 0;
+      margin: 0;
+      font-family: 'Share Tech', Monospace, Courier;
+      font-weight: 400;
+      font-size: 17px;
+      color: #c8c8c8;
+      min-height: 100%;
+      background: #222;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <label>Index</label> <input type="text" id="index" />
+    <label>Depth</label> <input type="number" id="depth" />
+    <label>Child count</label> <input type="number" id="count" />
+  </div>
+  <div class="container-fluid">
+    <button type="button" class="btn btn-primary" onclick="generateJSON()" > Generate </button>
+  </div>
+  <div class="container-fluid" id="output">
+  </div>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48046624-4', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+</body>
+
+</html>
