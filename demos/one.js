@@ -33,7 +33,7 @@ function generateJSON() {
         count = document.getElementById("count").value;
 		node.index = index;
 		childs = [];
-		childs.push(node);
+		// childs.push(node);
 		makeChild(node, depth, count);
 		document.getElementById("output").innerText = JSON.stringify(childs);
 		console.log(childs)
