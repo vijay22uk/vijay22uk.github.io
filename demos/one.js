@@ -8,7 +8,13 @@ function makeChild(node, level, childCount) {
     }
 
     for (var index = 0; index < childCount; index++) {
-        var _node = { level: (node.level + 1),type:"D" , "isplaceholder": "0","parent":node.index };
+         var _node = { type:"D" , "isplaceholder": "0","parent":node.index };
+        Object.defineProperty( _node, 'level', {
+        value:(node.level + 1),
+        writable:true,
+        configurable:true,
+        enumerable:false // this is the default value, so it could be excluded
+    	});
         _node.index = node.index + "." + (index+1);
 	 _node.name = "name " + _node.index ;
         childs.push(_node);
