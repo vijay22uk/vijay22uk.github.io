@@ -1,14 +1,16 @@
 var childs = [];
 function makeChild(node, level, childCount) {
-     if (node.level == level) {
+      if (node.level == level) {
         node.type ="F";
+        node.name = node.name + ".pdf";
+        node.fileSize = Math.floor(Math.random() * 10000) + 1000;  
         return;
     }
 
     for (var index = 0; index < childCount; index++) {
         var _node = { level: (node.level + 1),type:"D" , "isplaceholder": "0","parent":node.index };
         _node.index = node.index + "." + (index+1);
-	_node.name = "name " + _node.index + ".pdf";
+	 _node.name = "name " + _node.index ;
         childs.push(_node);
         makeChild(_node, level, childCount);
     }
