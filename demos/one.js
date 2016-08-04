@@ -40,7 +40,7 @@ function generateJSON() {
 		// childs.push(node);
 		makeChild(node, depth, count);
 		document.getElementById("output").innerText = JSON.stringify(childs);
-		console.log(childs)
+		console.log(childs.length);
 	} catch (e) {
 		alert("something is not right");
 	}
