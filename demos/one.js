@@ -1,11 +1,14 @@
 var childs = [];
 function makeChild(node, level, childCount) {
-    if (node.level == level) return;
+     if (node.level == level) {
+        node.type ="F";
+        return;
+    }
 
     for (var index = 0; index < childCount; index++) {
-        var _node = { level: (node.level + 1) };
+        var _node = { level: (node.level + 1),type:"D" , "isplaceholder": "0","parent":node.index };
         _node.index = node.index + "." + (index+1);
-		_node.name = "Node with index --> " + _node.index;
+	_node.name = "name " + _node.index + ".pdf";
         childs.push(_node);
         makeChild(_node, level, childCount);
     }
