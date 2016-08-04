@@ -3,7 +3,7 @@ function makeChild(node, level, childCount) {
       if (node.level == level) {
         node.type ="F";
         node.name = node.name + ".pdf";
-        node.fileSize = Math.floor(Math.random() * 10000) + 1000;  
+        node.fileSize = (Math.floor(Math.random() * 10000) + 1000).toString();  
         return;
     }
 
