@@ -1,9 +1,12 @@
 var childs = [];
+var leaf ="F";
 function makeChild(node, level, childCount) {
       if (node.level == level) {
-        node.type ="F";
+        node.type = leaf;
+        if(leaf.toLocaleLowerCase()=="f"){
         node.name = node.name + ".pdf";
         node.fileSize = (Math.floor(Math.random() * 10000) + 1000).toString();  
+        }
         return;
     }
 
@@ -31,6 +34,7 @@ function generateJSON() {
 		index = document.getElementById("index").value;
 		depth = document.getElementById("depth").value;
         count = document.getElementById("count").value;
+        leaf = document.getElementById("leaf").value;
 		node.index = index;
 		childs = [];
 		// childs.push(node);
