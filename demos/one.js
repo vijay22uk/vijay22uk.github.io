@@ -34,7 +34,7 @@ function generateJSON() {
 	var count = 3;
 	try {
 		index = document.getElementById("index").value;
-		alllevel = document.getElementById("depth").value;
+		alllevel = JSON.parse( document.getElementById("depth").value);
         count = alllevel ;
 		depth = Object.keys(alllevel).length
         leaf = document.getElementById("leaf").value;
