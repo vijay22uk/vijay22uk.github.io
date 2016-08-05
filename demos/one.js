@@ -1,5 +1,6 @@
 var childs = [];
 var leaf ="F";
+var alllevel;
 function makeChild(node, level, childCount) {
       if (node.level == level) {
         node.type = leaf;
@@ -9,8 +10,9 @@ function makeChild(node, level, childCount) {
         }
         return;
     }
+	console.log(alllevel[node.level] )
 
-    for (var index = 0; index < childCount; index++) {
+    for (var index = 0; index < alllevel[node.level] ; index++) {
          var _node = { type:"D" , "isplaceholder": "0","parent":node.index };
         Object.defineProperty( _node, 'level', {
         value:(node.level + 1),
@@ -32,8 +34,9 @@ function generateJSON() {
 	var count = 3;
 	try {
 		index = document.getElementById("index").value;
-		depth = document.getElementById("depth").value;
-        count = document.getElementById("count").value;
+		alllevel = document.getElementById("depth").value;
+        count = alllevel ;
+		depth = Object.keys(alllevel).length
         leaf = document.getElementById("leaf").value;
 		node.index = index;
 		childs = [];
@@ -45,5 +48,3 @@ function generateJSON() {
 		alert("something is not right");
 	}
 }
-
-//
